@@ -1,3 +1,6 @@
+**Since the parent project is inactive, the commits here will be ahead of the parent. The commits here are focused on getting data of OpenShift Virtualization/Kubevirt components**
+
+
 # O Must Gather (omg) v2 (WORK IN PROGRESS)
 
 With the previous (v1) implementation of omg, there were some major limitations. A major restructuring is being done to implement some advance features that are necessary, for example:
