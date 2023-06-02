@@ -1,4 +1,4 @@
-**Since the parent project is inactive, the commits here will be ahead of the parent. The commits here are focused on getting data of OpenShift Virtualization/Kubevirt components**
+**Due to the inactivity of the parent project, the commits made here will be ahead of the parent project. The focus of the project here is to obtain data related to OpenShift Virtualization/Kubevirt components**
 
 
 # O Must Gather (omg) v2 (WORK IN PROGRESS)
