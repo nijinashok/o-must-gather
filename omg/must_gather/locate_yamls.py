@@ -39,6 +39,9 @@ def _detect_yamls(path, plural):
                    Returns None if none were detected
     """
     lg.debug("FUNC_INIT: {}".format(locals()))
+    # potential yaml file in crs dir
+    group = path.split("/")[-1]
+    pot_crs = join('/'.join(path.split("/")[:-1]), "crs", plural + "." + group )
     # potential yaml file
     pot_y = join(path, plural+".yaml")
     # potential yaml dir
@@ -49,6 +52,12 @@ def _detect_yamls(path, plural):
     if isdir(pot_d):
         lg.debug("detected yaml dir {}".format(pot_d))
         y_in_d = [join(pot_d, y) for y in listdir(pot_d) if y.endswith(".yaml")]
+        lg.debug("{} yamls found".format(len(y_in_d)))
+        lg.trace("yamls_in_dir: {}".format(y_in_d))
+        return y_in_d
+    if isdir(pot_crs):
+        lg.debug("detected yaml crs dir {}".format(pot_crs))
+        y_in_d = [join(pot_crs, y) for y in listdir(pot_crs) if y.endswith(".yaml")]
         lg.debug("{} yamls found".format(len(y_in_d)))
         lg.trace("yamls_in_dir: {}".format(y_in_d))
         return y_in_d
